@@ -58,7 +58,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         <div class="header_bottom">
                             <div class="header_bottom_left"><a class="logo" href="index.html">Capacitaciones</a></div>
-                            <div class="header_bottom_right"><a href="#"><img src="images/addbanner_728x90_V1.jpg" alt=""></a></div>
+                            <div class="header_bottom_right"><a href="#"><img src="images/addbanner_728x90_V1.jpg" alt="" onclick="promotionClick()"></a></div>
                         </div>
                     </div>
                 </div>
@@ -551,8 +551,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 'action':'Buscar en la web',
                 'label':'Keywords:' + document.getElementById(valor).value
             }
-            );}
-
+            );
+    }
+     function promotionClick(){
+    dataLayer.push({
+    'event':'promotionClick',
+  'ecommerce':{
+        'promoclick':{
+            'promotions':[
+                    {'id':'12345',
+                    'name':'Sites template and banner for $3',
+                    'position':'Anuncio superior',
+                    'creative':'http://templates-prueba.com/'
+                    }
+                ]
+            }
+  
+            }
+});
+     }
 
 
         </script>
