@@ -543,6 +543,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             );
 
         }
+      function ClickBuscar(){
+        var valor = textoInput.val();
+        alert(valor);
+        dataLayer.push({
+                'event':'capacitacionEvent',
+                'category':'Home',
+                'action':'Buscar en la web',
+                'label':'Keywords:' + valor
+            }
+            );
+
+        }
+
+
 
         </script>
     </body>
