@@ -112,17 +112,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="col-lg-6 col-md-6 col-sm6">
                             <div class="content_top_right">
                                 <ul class="featured_nav wow fadeInDown">
-                                    <li><img src="images/300x215x1.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
+                                    <li><img src="images/300x215x1.jpg" alt="" ">
+                                        <div class="title_caption"><a onclick="promotionClick2('1')" href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                     <li><img src="images/300x215x2.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a onclick="promotionClick2('2')" href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                     <li><img src="images/300x215x3.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a onclick="promotionClick2('3')" href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                     <li><img src="images/300x215x4.jpg" alt="">
-                                        <div class="title_caption"><a href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
+                                        <div class="title_caption"><a  onclick="promotionClick2('4')" href="pages/single.html">Sed luctus semper odio aliquam rhoncus</a></div>
                                     </li>
                                 </ul>
                             </div>
@@ -568,9 +568,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }
   
             }
-});
+        });
      }
 
+
+    function promotionClick2(id){
+    dataLayer.push({
+    'event':'promotionClick',
+  'ecommerce':{
+        'promoclick':{
+            'promotions':[
+                    {'id':id,
+                    'name':'Sites template and banner for $3',
+                    'position':'Anuncio superior' + id,
+                    'creative':'http://templates-prueba.com/'
+                    }
+                ]
+            }
+  
+            }
+        });
+     }
 
         </script>
     </body>
